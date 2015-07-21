@@ -1,0 +1,25 @@
+﻿
+    * {font-weight:bold;            }
+            html, body {margin:0;padding:0;
+            }
+			body{
+				
+				}
+			html{height:100%;}
+			input {width:20px;text-align:center;border-radius: 7px;background-color:burlywood;margin:1px;}
+			div {text-align:center;}
+			.DIA {background:darkcyan; border:1px solid moccasin; border-radius:8px;}
+			.NUM_OK{background:red;}
+			p{margin:4px;}
+			div#menu {
+				width: 90%;
+				background-color: darkgoldenrod;
+				position:absolute;
+				bottom: 1px;
+				left: 5%;
+				display:none;
+				border-radius:10px 10px 0 0;
+			}
+			#menu p {border:1px solid black;font-size:40px; height: 20%;margin:20px;}
+			#menu p:hover {background-color:red;}
+

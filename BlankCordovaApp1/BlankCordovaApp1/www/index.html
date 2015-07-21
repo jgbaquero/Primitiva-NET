@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>BlankCordovaApp1</title>
+
+        <!-- Referencias de BlankCordovaApp1 -->
+        <link href="css/index.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://www.google.com/jsapi"></script>
+        <script src="scripts/index.js"></script>
+        
+    </head>
+    <!--<body style="background-color: moccasin;background-image: url('loading.gif');background-repeat: no-repeat;background-position: center;background-size:35%;" onload="Init();">-->
+    <body style="background-color: moccasin;">
+            <div id="menu">
+                <p onclick="Actualizar();">Actualizar</p>
+                <p onclick="navigator.app.exitApp();">Salir</p>
+            </div>
+            <script src="cordova.js"></script>
+            <script src="scripts/platformOverrides.js"></script>
+            
+            
+        </body>
+
+</html>

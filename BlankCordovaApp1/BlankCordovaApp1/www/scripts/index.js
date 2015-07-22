@@ -28,6 +28,7 @@ var Nums = [[], ['04', '08', '12', '24', '30', '49'], ['08', '11', '12', '30', '
     function onResume() {
         // TODO: esta aplicación se ha reactivado. Restaure el estado de la aplicación aquí.
     };
+})();
     
     var URL = 'http://www.loteriasyapuestas.es/es/la-primitiva/resultados/.formatoRSS';
     google.load("feeds", "1");
@@ -50,12 +51,13 @@ var Nums = [[], ['04', '08', '12', '24', '30', '49'], ['08', '11', '12', '30', '
                 MostrarDades(x);
                 if (Refresh == true && x == 0) {
                     var LastDate = result.feed.entries[0];
-                    if (Anterior != LastDate) {
-                        Refresh = false;
-                        var my_media = new Media('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');
-                        my_media.play();
+                    if (Anterior != null) {
+                        if (Anterior.publishedDate != LastDate.publishedDate) {
+                            Refresh = false;
+                            var my_media = new Media('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');
+                            my_media.play();
+                        }
                     }
-                    Anterior = LastDate;
                     if (Anterior == null) { Anterior = LastDate; }
                 }
             }
@@ -146,9 +148,12 @@ var Nums = [[], ['04', '08', '12', '24', '30', '49'], ['08', '11', '12', '30', '
         SetUp();
     }
 
-    function Actualizar() {
+    
+
+
+
+
+function Actualizar() {
         SetUp();
         $('#menu').hide();
     }
-
-} )();
